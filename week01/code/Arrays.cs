@@ -49,7 +49,10 @@ public static class Arrays
         }
 
         // Create the list, but seperate it into two lists so that the rotation is possible
+
+        // The first list should grab the last amount of numbers from the list
         List<int> suffixPart = data.GetRange(data.Count - amount, amount);
+        // While the second list should grab all numbers except the last amount from the list (so only the beginning portion of numbers are grabbed, in otherwords)
         List<int> prefixPart = data.GetRange(0, data.Count - amount);
 
         // Clear the lists and rebuild them
